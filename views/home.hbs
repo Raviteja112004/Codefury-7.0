@@ -21,6 +21,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -28,13 +29,14 @@
   <meta name="author" content="P=V^2/R">
   <meta name="description"
     content="We are from team P=V^2/R studying in UVCE as B.Tech in Information Science and Engineering build this website to help people from natural calamities.">
-  <meta name="keywords"
-    content="P=V^2/R,Naturalcalamities,disaster,help,sos,SOS">
+  <meta name="keywords" content="P=V^2/R,Naturalcalamities,disaster,help,sos,SOS">
   <title>Codefury7.0</title>
 </head>
 
 <body onload="loadfun()">
-  <div id="loading"><div class="loader"></div></div>
+  <div id="loading">
+    <div class="loader"></div>
+  </div>
   <div id="top"></div>
   <a href='#top'><img src="img/top.png" alt="top" class="top" style="bottom: 10px;" /></a>
   <img src="img/sun.png" class="sun" alt="light" style="display: none; bottom: 70px;" />
@@ -52,21 +54,37 @@
         <li><a href="#">Helpline</a></li>
         <li><a href="#">Donate</a></li>
         <li><a href="/news">Latest News</a></li>
+        <div class="loginuser text-black ml-[200px] item-center flex space-x-7 my-auto right-[100px]">
+          <button class="pushable">
+            <span class="front">
+              SOS
+            </span>
+          </button>
+          <li class="my-auto"> <a href="#">Hello, {{user}}</a></li>
+          <li class="bg-[#03a803] px-4 py-2 my-auto rounded-xl text-white login"><a href="{{form}}">{{content}}</a></li>
+        </div>
       </ul>
-      <li> <a href="#">Hello, {{user}}</a></li>
-      <li class="bg-[#03a803] px-4 py-2 rounded-xl text-white login"><a href="{{form}}">{{content}}</a></li>
+
+
+
+
+
+
       <div class="toggle_btn">
         <i class="fa-solid fa-bars"></i>
       </div>
     </div>
     <div class="dropbox_menu">
+      <li class="my-auto"> <a href="#">Hello, {{user}}</a></li>
       <li><a href="#">Home</a></li>
       <li><a href="/weather">Weather</a></li>
       <li><a href="#">Helpline</a></li>
       <li><a href="#">Donate</a></li>
       <li><a href="/news">Latest News</a></li>
-      <li> <a href="#">Hello, {{user}}</a></li>
-      <li><a href="{{form}}">{{content}}</a></li>
+
+      <li class="bg-[#03a803] px-4 w-[140px] mx-auto py-2 rounded-xl text-white login"><a
+          href="{{form}}">{{content}}</a></li>
+
 
     </div>
   </header>
@@ -78,9 +96,55 @@
     </section> -->
 
     <section class="home">
-      <button class="sosButton" value="SOS"></button>
 
-      <!-- <div class="slider py-20 w-[100%]   mx-auto hid ">
+      <div class="slider py-20 w-[100%] mt-[300px]  mx-auto hid ">
+        <div class="slides mx-auto rounded-xl overflow-hidden relative h-[400px] w-[70%]">
+          <div class="slide slide w-[100%] absolute h-full  transition-[1s] ">
+            <img src="img/sun.png" class="h-[100%] mx-auto hover:scale-[1.1]  transition-all" alt="Red Slide">
+            <div class="popup">Tired of usin Casio <br>Try Teja calculator<br>
+              Click here:<button class="p-1 ml-2 rounded-lg hover:-translate-y-1 transition-all bg-black"><a
+                  href="https://github.com/Raviteja112004/Simple-Calculator">Link</a></button></div>
+          </div>
+          <div class="slide  slide w-[100%] absolute  h-full transition-[1s]">
+            <img src="img/moon.png" class="h-[100%] mx-auto  hover:scale-[1.1] transition-all" alt="Blue Slide">
+            <div class="popup">Tic-Tac-Toe Game <br>
+              Wanna Play? <br>Click here:<button
+                class="p-1 ml-2 rounded-lg hover:-translate-y-1 transition-all bg-black"><a
+                  href="https://github.com/Raviteja112004/TicTacToe">Link</a></button></div>
+          </div>
+          <div class="slide slide w-[100%] absolute  h-full transition-[1s]">
+            <img src="img/top.png" class="h-[100%] mx-auto  hover:scale-[1.1] transition-all" alt="Green Slide">
+            <div class="popup">Want Some Motivation?<br>
+              Go to My Quote Generator <br>Click here:<button
+                class="p-1 ml-2 rounded-lg hover:-translate-y-1 transition-all bg-black"><a
+                  href="https://github.com/Raviteja112004/Quote-Generators">Link</a></button></div>
+          </div>
+          <div class="slide slide w-[100%] absolute  h-full transition-[1s]">
+            <img src="img/loginbg.jpg" class="h-[100%] mx-auto  hover:scale-[1.1] transition-all" alt="Green Slide">
+            <div class="popup">Setting Goals and not <br> following at all?
+              Here's a <br>To-Do list App for You!! <br>Click here:<button
+                class="p-1 ml-2 rounded-lg hover:-translate-y-1 transition-all bg-black"><a
+                  href="https://github.com/Raviteja112004/To-Do">Link</a></button></div>
+          </div>
+          <div class="slide slide w-[100%] absolute h-full  transition-[1s]">
+            <img src="images/instahome.jpg" class="h-[100%]  hover:scale-[1.1] transition-all" alt="Green Slide">
+            <div class="popup">Like Clones?
+              Check My <br> InstaHome Page Clone <br> Click here:<button
+                class="p-1 ml-2 rounded-lg hover:-translate-y-1 transition-all bg-black"><a
+                  href="https://github.com/Raviteja112004/InstagramHomePageClone">Link</a></button></div>
+          </div>
+        </div>
+        <div class="buttons flex justify-center space-x-20 mt-10">
+          <button
+            class="prev bg-black text-white p-3 px-5 hover:bg-white hover:text-black transition-hover transition-[1s] rounded-xl ">&#10094</button>
+          <button
+            class="bg-black text-white p-3 px-5 hover:bg-white hover:text-black transition-hover transition-[1s] rounded-xl"><a
+              href="https://github.com/Raviteja112004" target="_blank"
+              class="bg-transparent  p-3 px-5 hover:bg-transparent">Github Link</a></button>
+          <button
+            class="next bg-black text-white p-3 px-5 hover:bg-white hover:text-black transition-hover transition-[1s] rounded-xl">&#10095</button>
+        </div>
+        <!-- <div class="slider py-20 w-[100%]   mx-auto hid ">
         <div class="slides mx-auto rounded-xl overflow-hidden relative h-[400px] w-[70%]">
           
             
@@ -117,7 +181,7 @@
     </div>
          <button class=" gitpage">Github</button>
         <button class="web">Link</button> -->
-      <!-- </div>
+        <!-- </div>
 </div>  -->
     </section>
   </main>

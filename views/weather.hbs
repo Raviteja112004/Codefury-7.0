@@ -8,14 +8,17 @@
 
     
 </head>
-<body>
+<body onload="loadfun_main()">
+     <div id="loading_main">
+                <div class="loader"></div>
+            </div>
     <div class="container">
         <h1>Weather App</h1>
         <input type="text" id="locationInput" placeholder="Enter a city">
         <button id="searchButton">Search</button>
         <button id="current">Get Current Weather</button>
         <div class="weather-info">
-            <div id="loading"></div>
+             
             <h2 id="location"></h2>
             <p id="temperature"></p>
             <p id="description"></p>

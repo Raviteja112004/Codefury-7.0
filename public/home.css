@@ -128,7 +128,7 @@ header {
 
 .navbar {
     width: 100%;
-    height: 60px;
+    height: 70px;
     max-width: 100%;
     margin: 0 auto;
     display: flex;
@@ -154,7 +154,6 @@ header {
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     font-style: normal;
-    margin-left: 2rem;
 
 }
 
@@ -167,6 +166,8 @@ header {
 
 .navbar .navlinks {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     gap: 2rem;
     color: rgb(3, 168, 3);
 
@@ -209,11 +210,10 @@ header {
 /* Dropbox menu */
 .dropbox_menu {
     display: none;
-    position: absolute;
     right: 2rem;
     height: 0px;
     top: 60px;
-    width: 300px;
+    width: 100%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 10px;
@@ -235,7 +235,7 @@ header {
 }
 
 .dropbox_menu.open {
-    height: 240px;
+    height: 350px;
     display: block;
 }
 
@@ -266,19 +266,33 @@ header {
     font-style: normal;
 }
 
-.sosButton{
-    width: 600px;
-    height: 600px;
-    color: red;
-}
+.pushable {
+    background: hsl(340deg 100% 32%);
+    border-radius: 100px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+  .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 100px;
+    font-size: 1.25rem;
+    background: hsl(345deg 100% 47%);
+    color: white;
+    transform: translateY(-6px);
+  }
 
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
 
 
 /* ---------------------------footer---------------------------- */
 footer {
     width: 100%;
     position: absolute;
-    bottom: 0;
     background: rgba(168, 168, 168, 0.26);
     /* border-radius: 16px; */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -449,6 +463,11 @@ form button .fa-solid {
         display: block;
 
     }
+
+    .login{
+        display: block;
+    }
+
 
     footer {
         bottom: unset;

@@ -9,17 +9,16 @@
 
 </head>
 
-<body>
+<body onload="loadfun()">
+     <div id="loading">
+                <div class="loader"></div>
+            </div>
     <div class="container">
         <h1>Natural Disaster News in India</h1>
         <form id="apiForm">
             <button type="submit">Fetch Latest News</button>
         </form>
-        <div id="newsContainer" onload="loadfun()">
-            {{!-- <div id="loading">
-                <div class="loader"></div>
-            </div> --}}
-        </div>
+        <div id="newsContainer" >        </div>
 
         <script src="news.js"></script>
 </body>

@@ -11,6 +11,12 @@ const descriptionElement = document.getElementById('description');
 const apiKey = '1aa26e0885db3c423bcbef876b81ff1f';
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
+var load_main = document.getElementById("loading_main");
+function loadfun_main() {
+    load_main.style.display = "none";
+  }
+  
+
 const getLocation = async (latitude, longitude) => {
     let query = `${latitude},${longitude}`;
     let apiLoc = `${apiEndpoint}?key=${apiLocationKey}&q=${query}&pretty=1`;
