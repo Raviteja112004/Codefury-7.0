@@ -11,32 +11,8 @@ const descriptionElement = document.getElementById('description');
 const apiKey = '1aa26e0885db3c423bcbef876b81ff1f';
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
-var load_main = document.getElementById("loading_main");
-function loadfun_main() {
-    load_main.style.display = "none";
-  }
   
 
-const getLocation = async (latitude, longitude) => {
-    let query = `${latitude},${longitude}`;
-    let apiLoc = `${apiEndpoint}?key=${apiLocationKey}&q=${query}&pretty=1`;
-
-    try {
-        const res = await fetch(apiLoc);
-        const data = await res.json();
-
-        if (data.results && data.results.length > 0) {
-            const city = data.results[0].components.city;
-            console.log(city); 
-            locationInput.value = city; 
-            fetchWeather(city); 
-        } else {
-            console.log('No results found');
-        }
-    } catch (error) {
-        console.log('Error fetching location data:', error);
-    }
-};
 
 
 currentBtn.addEventListener('click', () => {
@@ -54,6 +30,27 @@ currentBtn.addEventListener('click', () => {
         console.error('Geolocation is not supported by this browser.');
     }
 });
+const getLocation = async (latitude, longitude) => {
+    let query = `${latitude},${longitude}`;
+    let apiLoc = `${apiEndpoint}?key=${apiLocationKey}&q=${query}&pretty=1`;
+
+    try {
+        const res = await fetch(apiLoc);
+        const data = await res.json();
+
+        if (data.results && data.results.length > 0) {
+            const city = data.results[0].components.city;
+            console.log(data); 
+            locationInput.value = city; 
+            fetchWeather(city); 
+        } else {
+            console.log('No results found');
+        }
+    } catch (error) {
+        console.log('Error fetching location data:', error);
+    }
+};
+
 
 searchButton.addEventListener('click', () => {
     const location = locationInput.value;
