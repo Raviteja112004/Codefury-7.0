@@ -54,15 +54,16 @@
         <li><a href="#">Helpline</a></li>
         <li><a href="#">Donate</a></li>
         <li><a href="/news">Latest News</a></li>
-        <div class="loginuser text-black ml-[200px] item-center flex space-x-7 my-auto right-[100px]">
+        <div class="loginuser text-black ml-[140px] mr-[100px] item-center flex space-x-7 my-auto right-[100px]">
+          
+          <li class="my-auto"> <a href="#">Hello, {{user}}</a></li>
+          <li class="bg-[#03a803] px-4 py-2 my-auto rounded-xl text-white login"><a href="{{form}}">{{content}}</a></li> </div>
           <button class="pushable">
             <span class="front">
               SOS
             </span>
           </button>
-          <li class="my-auto"> <a href="#">Hello, {{user}}</a></li>
-          <li class="bg-[#03a803] px-4 py-2 my-auto rounded-xl text-white login"><a href="{{form}}">{{content}}</a></li>
-        </div>
+       
       </ul>
 
 
@@ -74,19 +75,23 @@
         <i class="fa-solid fa-bars"></i>
       </div>
     </div>
-    <div class="dropbox_menu">
-      <li class="my-auto"> <a href="#">Hello, {{user}}</a></li>
-      <li><a href="#">Home</a></li>
-      <li><a href="/weather">Weather</a></li>
-      <li><a href="#">Helpline</a></li>
-      <li><a href="#">Donate</a></li>
-      <li><a href="/news">Latest News</a></li>
+    <div class="dropbox_menu flex flex-col items-center">
+    <button class="pushable grid mx-auto justify-center">
+        <span class="front flex">
+            SOS
+        </span>
+    </button>
+    <li class="my-auto"> <a href="#">Hello, {{user}}</a></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="/weather">Weather</a></li>
+    <li><a href="#">Helpline</a></li>
+    <li><a href="#">Donate</a></li>
+    <li><a href="/news">Latest News</a></li>
+    <li class="bg-[#03a803] px-4 w-[140px] mx-auto py-2 rounded-xl text-white login">
+        <a href="{{form}}">{{content}}</a>
+    </li>
+</div>
 
-      <li class="bg-[#03a803] px-4 w-[140px] mx-auto py-2 rounded-xl text-white login"><a
-          href="{{form}}">{{content}}</a></li>
-
-
-    </div>
   </header>
   <main>
     <!-- <section class="home">
@@ -100,10 +105,10 @@
       <div class="slider py-20 w-[100%] mt-[300px]  mx-auto hid ">
         <div class="slides mx-auto rounded-xl overflow-hidden relative h-[400px] w-[70%]">
           <div class="slide slide w-[100%] absolute h-full  transition-[1s] ">
-            <img src="img/sun.png" class="h-[100%] mx-auto hover:scale-[1.1]  transition-all" alt="Red Slide">
-            <div class="popup">Tired of usin Casio <br>Try Teja calculator<br>
+            <img src="img/sun.png" class="h-[100%] mx-auto  transition-all" alt="Red Slide">
+            {{!-- <div class="popup">Tired of usin Casio <br>Try Teja calculator<br>
               Click here:<button class="p-1 ml-2 rounded-lg hover:-translate-y-1 transition-all bg-black"><a
-                  href="https://github.com/Raviteja112004/Simple-Calculator">Link</a></button></div>
+                  href="https://github.com/Raviteja112004/Simple-Calculator">Link</a></button></div> --}}
           </div>
           <div class="slide  slide w-[100%] absolute  h-full transition-[1s]">
             <img src="img/moon.png" class="h-[100%] mx-auto  hover:scale-[1.1] transition-all" alt="Blue Slide">

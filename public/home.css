@@ -82,7 +82,7 @@
 
 body {
     height: 100vh;
-    background-color: #fafafa;
+    background-color: #dcf0ed;
     /* background-image: url('https://imgs.search.brave.com/HNR9nr1N583tWWv8QqwUyfW5rhx9s0utj5Z1tjnjGSs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMy8w/Ny8zMC8xNy8wMC9z/cGlkZXItd2ViLTgx/NTkzMTVfMTI4MC5q/cGc'); */
     background-size: cover;
     background-position: center;
@@ -276,7 +276,7 @@ header {
   }
   .front {
     display: block;
-    padding: 12px 42px;
+    padding: 12px 22px;
     border-radius: 100px;
     font-size: 1.25rem;
     background: hsl(345deg 100% 47%);
@@ -293,18 +293,18 @@ header {
 footer {
     width: 100%;
     position: absolute;
-    background: rgba(168, 168, 168, 0.26);
+    /* background: rgba(168, 168, 168, 0.26); */
     /* border-radius: 16px; */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     /* border-radius: 30px; */
-    /* background: #cecece; */
-    /* box-shadow: 13px 13px 26px #bebebe,
-        -13px -13px 26px #ffffff; */
+    background: #cecece;
+    box-shadow: 13px 13px 26px #bebebe,
+        -13px -13px 26px #ffffff;
     padding: 30px 0 20px;
-    /* border-top-right-radius: 125px;
-    border-top-left-radius: 125px; */
+    border-top-right-radius: 125px;
+    border-top-left-radius: 125px;
     font-size: 13px;
     line-height: 20px;
 
