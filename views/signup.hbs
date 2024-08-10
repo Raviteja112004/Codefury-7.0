@@ -51,15 +51,14 @@
                 <label for="Username" class="mt-4 label  font-semibold text-2xl">Username</label>
                 </div>
                 <div class="input-container">
-                <input type="password" required name="password" class="border-[1px] px-4 rounded-lg bg-transparent input p-1 ">
+                <input type="password" required minlength="8" name="password" class="border-[1px] px-4 rounded-lg bg-transparent input p-1 ">
                 <label for="Password" class="mt-4 label font-semibold  text-2xl">Set Password</label>
                 </div>
-                {{!-- <div class="input-container">
-                <input type="password" required name="cpassword" class="border-[1px] px-4 rounded-lg bg-transparent input p-1 ">
-                <label for="confirmPassword" class="mt-4 label text-2xl">Confirm Password</label>
-                </div> --}}
-                {{!-- <label for="" class="mt-4 text-2xl">Password</label>
-                <input type="password" required name="password" placeholder="Password" class="border-1 px-4 rounded-lg bg-transparent mt-2 p-1 w-56"> --}}
+                <div class="input-container">
+                <input type="text"required name="location" class="border-[1px] px-4 rounded-lg bg-transparent input p-1 ">
+                <label for="Location" class="mt-4 label font-semibold  text-2xl">Location</label>
+                </div>
+                
                 <button type="submit" 
                     class=" text-white rounded-lg bg-blue-900 hover:bg-blue-950  px-10 border-blue-700 py-1 mx-auto  font-semibold">Sign Up</button>
             </form>
