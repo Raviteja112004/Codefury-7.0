@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natural Disaster News in India</title>
     <link rel="stylesheet" href="news.css">
+
 </head>
+
 <body>
     <div class="container">
         <h1>Natural Disaster News in India</h1>
         <form id="apiForm">
             <button type="submit">Fetch Latest News</button>
         </form>
-        <div id="newsContainer"></div>
-    </div>
+        <div id="newsContainer" onload="loadfun()">
+            {{!-- <div id="loading">
+                <div class="loader"></div>
+            </div> --}}
+        </div>
 
-    <script src="news.js"></script>
+        <script src="news.js"></script>
 </body>
+
 </html>

@@ -1,3 +1,9 @@
+var load = document.getElementById("loading");
+
+function loadfun() {
+  load.style.display = "none";
+}
+
 document.getElementById('apiForm').addEventListener('submit', function(event) {
     event.preventDefault();
     fetchNews();

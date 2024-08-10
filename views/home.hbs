@@ -23,12 +23,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="style.css">
-
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="logo.png" type="favicon">
+  <meta name="author" content="P=V^2/R">
+  <meta name="description"
+    content="We are from team P=V^2/R studying in UVCE as B.Tech in Information Science and Engineering build this website to help people from natural calamities.">
+  <meta name="keywords"
+    content="P=V^2/R,Naturalcalamities,disaster,help,sos,SOS">
   <title>Codefury7.0</title>
 </head>
 
-<body>
+<body onload="loadfun()">
+  <div id="loading"><div class="loader"></div></div>
+  <div id="top"></div>
+  <a href='#top'><img src="img/top.png" alt="top" class="top" style="bottom: 10px;" /></a>
+  <img src="img/sun.png" class="sun" alt="light" style="display: none; bottom: 70px;" />
+  <img src="img/moon.png" div class="moon" alt="dark" style="bottom: 70px;" />
   <!-- Navbar and Home page code -->
   <header>
     <div class="navbar">
@@ -54,6 +64,7 @@
       <li><a href="/weather">Weather</a></li>
       <li><a href="#">Helpline</a></li>
       <li><a href="#">Donate</a></li>
+      <li><a href="/news">Latest News</a></li>
       <li> <a href="#">Hello, {{user}}</a></li>
       <li><a href="{{form}}">{{content}}</a></li>
 
@@ -67,6 +78,8 @@
     </section> -->
 
     <section class="home">
+      <button class="sosButton" value="SOS"></button>
+
       <!-- <div class="slider py-20 w-[100%]   mx-auto hid ">
         <div class="slides mx-auto rounded-xl overflow-hidden relative h-[400px] w-[70%]">
           
@@ -181,10 +194,33 @@
         ? 'fa-solid fa-xmark'
         : 'fa-solid fa-bars';
     }
-    </script>
-   {{#if successMessage}}
+
+    var load = document.getElementById("loading");
+
+    function loadfun() {
+      load.style.display = "none";
+    }
+
+    var moon = document.querySelector(".moon");
+    var sun = document.querySelector(".sun");
+
+    moon.onclick = function () {
+      document.body.style.backgroundColor = "#191a1a";
+      document.body.style.color = "white";
+      sun.style.display = "block";
+      moon.style.display = "none";
+    }
+
+    sun.onclick = function () {
+      document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
+      sun.style.display = "none";
+      moon.style.display = "block";
+    }
+  </script>
+  {{#if successMessage}}
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       toastr.options = {
         "closeButton": true,
         "progressBar": true,
@@ -198,7 +234,7 @@
 
   {{#if successSign}}
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       toastr.options = {
         "closeButton": true,
         "progressBar": true,
