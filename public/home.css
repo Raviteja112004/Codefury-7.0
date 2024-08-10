@@ -78,7 +78,24 @@
     cursor: pointer;
 }
 
-
+.popup {
+    display: none;
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    z-index: 10;
+    transition:  ease-in-out;
+   
+}
+.slide:hover .popup {
+    display: block;
+    transition: 2s;
+    
+}
 
 body {
     height: 100vh;

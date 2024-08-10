@@ -47,4 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
           }, 3000);
       });
   });
+
+  const sos = document.querySelector('.pushable').addEventListener('click',()=>{
+    const ph = '9711077372';
+    window.location.href = `tel:${ph}`;
+  })
+  
 });
