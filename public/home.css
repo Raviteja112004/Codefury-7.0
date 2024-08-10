@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans' , sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #fafafa;
+    /* background-image: url('https://imgs.search.brave.com/HNR9nr1N583tWWv8QqwUyfW5rhx9s0utj5Z1tjnjGSs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMy8w/Ny8zMC8xNy8wMC9z/cGlkZXItd2ViLTgx/NTkzMTVfMTI4MC5q/cGc'); */
+    background-size: cover;
+    background-position: center;
+    font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+
+
+}
+li{
+    list-style: none;
+   
+}
+.login:hover{
+    background: #07d307;
+}
+a{
+    text-decoration: none;
+    color: #03a803;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+a:hover{
+    color: black;
+
+    text-decoration: none;
+}
+
+/* header */
+
+header{
+    position: relative;
+  
+
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border-radius: 30px; */
+    
+ /* From https://css.glass */
+background: rgba(168, 168, 168, 0.26);
+/* border-radius: 16px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px);
+
+}
+
+.navbar .logo a{
+    font-size:1.5rem;
+    font-weight: bold;
+}
+
+.logo{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+ margin-left: 2rem;
+ 
+}
+
+.logo #lg{
+    
+    color: rgb(3, 168, 3);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.navbar .navlinks{
+ display: flex;
+ gap: 2rem;
+ color: rgb(3, 168, 3);
+ 
+}
+
+.navbar .toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+
+
+}
+
+.nav_btn{
+    background-color:rgb(3, 168, 3) ;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 2rem;
+
+
+}
+
+
+.nav_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+.nav_btn:active{
+    scale: 0.95;
+}
+ /* Dropbox menu */
+ .dropbox_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    height: 0px;
+    top: 60px;
+    width: 300px;
+    background: rgba(255,255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropbox_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropbox_menu .nav_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.dropbox_menu.open{
+    height: 240px;
+    display: block;
+}
+
+
+/* Home page design */
+ .home{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(1, 99, 23);
+    padding-bottom: 400px;
+    
+
+
+}
+.home h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+   
+    /* color: #4756ca;; */
+    color: green;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
+/* ---------------------------footer---------------------------- */
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* border-radius: 30px; */
+    background: #e0e0e0;
+    box-shadow:  13px 13px 26px #bebebe,
+                 -13px -13px 26px #ffffff;
+    color: rgb(6, 6, 6);
+    padding: 30px 0 20px;
+    border-top-right-radius: 125px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+
+}
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+
+
+}
+
+.col h3{
+    color: green;
+}
+.col:nth-child(2), .col:nth-child(3){
+    flex-basis: 15%;
+}
+ .logo1{
+
+    margin-bottom:30px;
+}
+.col h3{
+    width: fit-content;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+.email{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+footer li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+footer li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+form .fa-regular{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;   
+}
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+
+}
+form button .fa-solid{
+    font-size: 16px;
+    color: #ccc;
+
+
+}
+
+.social_icons .fa-brands{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+
+
+}
+/* hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+} */
+.copyright{
+    text-align: center;
+}
+
+/* .underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+} */
+
+/* .underline span{
+    width: 15px;
+    height: 100%;
+    /* background:#fff ; */
+    /* border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+} */ 
+
+
+
+
+/* Responsive design media query */
+@media(max-width:1200px){
+
+    .navbar .navlinks,
+    .navbar .nav_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+
+    }
+    footer{
+        bottom: unset;
+       
+
+    }
+    .col{
+        flex-basis: 100%;
+    
+    
+    }
+    .col:nth-child(2), .col:nth-child(3){
+        flex-basis: 100%;
+}
+}
+
+@media(max-width:576px){
+    .dropbox_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+}
+
+/* transition */
+body{
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn{
+    from {
+        opacity: 0;
+        transform: rotate(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+    
+}
+

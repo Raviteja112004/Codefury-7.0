@@ -1,0 +1,149 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../input.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script
+    	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+    	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div
+        class="container flex flex-col justify-center items-center h-[100vh] w-full">
+        
+        <div class="form min-h-[60vh] w-[50vh]  p-10 text-white flex flex-col justify-center items-center ">
+             {{!-- <div class="bg-white h-[0.5px] w-auto"></div> --}}
+            <h1 class="text-blue-450  rounded-lg px-16 py-2 text-4xl mx-auto mb-4 mt-3 font-semibold ">
+               Sign Up
+            </h1>
+            {{!-- <div class="bg-white h-[1px] w-auto"></div> --}}
+            <form action="/signup" method="post" class ="flex flex-col space-y-9 justify-center items-center space-y-2 h-auto " >
+                <p class="mx-auto text-red-600">{{content}}</p>
+                
+                 <div class="input-container">
+                <input type="text" required name="firstName" class="border-[1px] px-4 rounded-lg bg-transparent input p-1 ">
+                <label for="Username" class="mt-4 label  font-semibold text-2xl">First Name</label>
+                </div>
+                 <div class="input-container">
+                <input type="text" required name="lastName" class="border-[1px] px-4 rounded-lg bg-transparent input p-1 ">
+                <label for="Username" class="mt-4 label font-semibold  text-2xl">Last Name</label>
+                </div>
+                <div class="input-container">
+                <input type="text" required name="name" class="border-[1px] px-4 rounded-lg bg-transparent input p-1 ">
+                <label for="Username" class="mt-4 label  font-semibold text-2xl">Username</label>
+                </div>
+                <div class="input-container">
+                <input type="password" required name="password" class="border-[1px] px-4 rounded-lg bg-transparent input p-1 ">
+                <label for="Password" class="mt-4 label font-semibold  text-2xl">Set Password</label>
+                </div>
+                {{!-- <div class="input-container">
+                <input type="password" required name="cpassword" class="border-[1px] px-4 rounded-lg bg-transparent input p-1 ">
+                <label for="confirmPassword" class="mt-4 label text-2xl">Confirm Password</label>
+                </div> --}}
+                {{!-- <label for="" class="mt-4 text-2xl">Password</label>
+                <input type="password" required name="password" placeholder="Password" class="border-1 px-4 rounded-lg bg-transparent mt-2 p-1 w-56"> --}}
+                <button type="submit" 
+                    class=" text-white rounded-lg bg-blue-900 hover:bg-blue-950  px-10 border-blue-700 py-1 mx-auto  font-semibold">Sign Up</button>
+            </form>
+            <a href="/login" class="underline mt-8 mx-auto ">Already have an Account?</a>
+   
+</div>
+        
+    </div>
+        <style>
+            body{
+            background: url(bg.jpg); 
+            background-size: cover;
+            background-repeat: no-repeat;
+    
+         }
+        .form{
+            
+    
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 239, 239, 0.094);
+    
+  
+        }
+  .input-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    outline: none;
+    
+}
+
+.input:focus {
+    border-color: #fff;
+}
+.input-container .input{
+
+}
+
+.label {
+    position: absolute;
+    top: -25%;
+    left: 4px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #beb9b9;
+    pointer-events: none;
+    padding: 0px 5px;
+    transition: all 0.2s ease-out;
+}
+
+.input:focus ~ .label,
+.input:valid~label{
+    top: -100%;
+    left: 4px;
+    font-size: 15px;
+    background: rgba(255, 255, 250, 0);
+    border: #ccc;
+    color: #e8e6e6ee;
+    z-index: 999;
+}
+      
+    </style>
+      {{#if wrongPassword}} 
+<script>
+    $(document).ready(function() {
+        toastr.options = {
+            "closeButton": true,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "timeOut": "3000"
+        };
+        toastr.error("{{wrongPassword}}");
+    });
+</script>
+{{/if}} 
+
+</body>
+
+</html>
