@@ -42,7 +42,7 @@ const getLocation = async (latitude, longitude) => {
             const city = data.results[0].components.city;
             console.log(data); 
             locationInput.value = city; 
-            fetchWeather(city); 
+           await fetchWeather(city); 
         } else {
             console.log('No results found');
         }
