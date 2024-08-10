@@ -6,6 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
   slides.forEach((slide, index) => {
       slide.style.left = `${index * 100}%`;
   });
+  const marquee = document.querySelector('.marquee-wrapper');
+
+  const marqueeContent = document.querySelector('.marquee-content');
+
+  marqueeContent.addEventListener('mouseover', () => {
+    marqueeContent.style.animationPlayState = 'paused';
+  });
+  
+  marqueeContent.addEventListener('mouseout', () => {
+    marqueeContent.style.animationPlayState = 'running';
+  });
+  
 
   const slideimg = () => {
       slides.forEach((slide) => {
@@ -48,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  const sos = document.querySelector('.pushable').addEventListener('click',()=>{
-    const ph = '9711077372';
-    window.location.href = `tel:${ph}`;
-  })
+//   const sos = document.querySelector('.pushable').addEventListener('click',()=>{
+//     const ph = '9711077372';
+//     window.location.href = `tel:${ph}`;
+//   })
   
 });

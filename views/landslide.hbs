@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landslide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+<style>
+  #sub_name{
+    color: #000;
+    margin-left: 3rem;
+    font-size: 1.5rem;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.image-container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-container img {
+    margin-top: 2rem;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.e_main h1{
+    text-align: center;
+    color: green;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.content1{
+    margin-left: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    .image-container img {
+        object-fit: contain;
+    }
+}
+
+/* -----------------------------------content of landslide-------------------------------- */
+
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #008080;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+#dos{
+    font-weight: bold;
+    color: green;
+}
+
+#donts{
+    font-weight: bold;
+    color: red;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+#head{
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+
+
+
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+          <!-- logo -->
+          <div class="logo">
+            <a href="#">Web <span id="lg">Logo</span>   </a>
+          </div>
+          <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Preplans</a></li>
+            <li><a href="#">Helpline</a></li>
+            <li><a href="#">Weather</a></li>
+            <li><a href="#">Latest News</a></li>
+          </ul>
+          <a href="#" class="alert_btn">Alert</a>
+          <!-- <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div> -->
+          
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+    
+        </div>
+        <div class="dropbox_menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Preplans</a></li>
+          <li><a href="#">Helpline</a></li>
+          <li><a href="#">Weather</a></li>
+          <!-- <a href="#" class="nav_btn">Login</a> -->
+    
+        </div>
+      </header>
+
+      <div class="image-container">
+        <img src="images/landslideimg.jpg" alt="Earthquake Image">
+    </div>
+
+
+    <h1 id="head">Landslides</h1>
+
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>India has the highest mountain chain on earth, the Himalayas, which are formed due to the collision of the Indian and Eurasian plates. The northward movement of the Indian plate towards China causes continuous stress on the rocks, rendering them friable, weak, and prone to landslides and earthquakes. The slow motion of the Indian crust, about 5 cm/year, accumulates stress that leads to natural disasters.</p>
+        <p>Landslides and avalanches are major hydro-geological hazards that affect large parts of India, including the Himalayas, the Northeastern hill ranges, the Western Ghats, the Nilgiris, the Eastern Ghats, and the Vindhyans. These regions cover about 15% of the landmass.</p>
+    </section>
+
+    <section id="affected-regions">
+        <h2>Affected Regions</h2>
+        <p>The Himalayas alone account for landslides of every type: big and small, quick and creeping, ancient and new. The Northeastern region is also badly affected by landslides. Regions such as Darjeeling in West Bengal, Sikkim, Mizoram, Tripura, Meghalaya, Assam, Nagaland, and Arunachal Pradesh face chronic landslide problems, causing recurring economic losses worth billions of rupees.</p>
+        <p>The Western Ghats in the South, along the steep slopes overlooking the Konkan coast, also face constant landslide threats, particularly in the Nilgiris region.</p>
+    </section>
+
+    <section id="notable-incidents">
+        <h2>Notable Incidents</h2>
+        <p>Some spectacular landslide tragedies include the Varnavat landslide in Uttarkashi District, the Malpha landslide in Pithoragarh District, the Okhimath landslide in Chamoli District, and the Paglajhora landslide in Darjeeling District, among others.</p>
+        <img src="images/landslide1.jpg" alt="Okhimath Landslide">
+        <p>The Okhimath landslide formed a lake in Madhyamaheshwerganga, Rudraprayag District.</p>
+    </section>
+
+    <section id="hazard-zonation">
+        <h2>Landslide Hazard Zonation (LHZ)</h2>
+        <p>NDMA guidelines are followed for Landslide Hazard Zonation (LHZ) maps at a 1:50,000 scale and progressively larger scales for specific areas. National Remote Sensing Center (NRSC), Department of Science and Technology (DST), Council of Scientific and Industrial Research (CSIR), and various academic institutions have contributed significantly to this effort.</p>
+        <img src="images/landslidesmap.jpg" alt="Landslide Hazard Zonation Map">
+        <p>Approximately 15% of the Indian landmass must be covered by such maps to classify slopes in various hazard levels. GIS and Remote Sensing applications are used through NRSC under a special group of GIS for LHZ at NDMA.</p>
+    </section>
+
+    <section class="emergency-kit">
+        <h2>Emergency Kit</h2>
+        <ul>
+            <li>Battery operated torch</li>
+            <li>Extra batteries</li>
+            <li>Battery operated radio</li>
+            <li>First aid kit and manual</li>
+            <li>Emergency food (dry items) and water (packed and sealed)</li>
+            <li>Candles and matches in a waterproof container</li>
+            <li>Knife</li>
+            <li>Chlorine tablets or powdered water purifiers</li>
+            <li>Can opener</li>
+            <li>Essential medicines</li>
+            <li>Cash, Aadhar Card, and Ration Card</li>
+            <li>Thick ropes and cords</li>
+            <li>Sturdy shoes</li>
+        </ul>
+    </section>
+
+    <section id="recovery">
+        <h2>Recovery and Rebuilding</h2>
+        <p>Remain calm, be alert, and awake. Listen to warnings of heavy and prolonged rainfall from the weather station. If your home is located below a debris-covered area, move to a safer place. Listen for sounds of rockfall, moving debris, and cracking trees.</p>
+        <p>Call and help rescue teams, keep drinking water containers and a first aid kit, and avoid entering damaged houses. Watch for flooding if close to a river, help others who need assistance, especially elderly people, children, and women. Seek advice from local authorities for rebuilding damaged houses and roads. Report any damage to roads, power, and telephone lines to the concerned authorities.</p>
+    </section>
+
+    <section id="dos-and-donts">
+        <h2>Do's & Don'ts</h2>
+        <h3 id="dos">Do's</h3>
+        <ul>
+            <li>Prepare tours to hilly regions according to weather department information.</li>
+            <li>Move away from landslide paths or downstream valleys quickly.</li>
+            <li>Keep drains clean.</li>
+            <li>Inspect drains for litter, leaves, plastic bags, rubble, etc.</li>
+            <li>Keep the weep holes open.</li>
+            <li>Grow more trees that can hold the soil through roots.</li>
+            <li>Identify areas of rock fall and subsidence, and move to safer areas.</li>
+            <li>Listen for unusual sounds such as trees cracking or boulders knocking together.</li>
+            <li>Stay alert, awake, and active during the impact or probability of impact.</li>
+            <li>Locate and go to shelters.</li>
+            <li>Try to stay with your family and companions.</li>
+            <li>Check for injured and trapped persons.</li>
+            <li>Mark paths of tracking to avoid getting lost.</li>
+        </ul>
+
+        <h3 id="donts">Don'ts</h3>
+        <ul>
+            <li>Avoid construction and staying in vulnerable areas.</li>
+            <li>Do not panic and lose energy by crying.</li>
+            <li>Do not touch or walk over loose material and electrical wiring or poles.</li>
+            <li>Do not build houses near steep slopes and drainage paths.</li>
+            <li>Do not drink contaminated water directly from rivers, springs, or wells.</li>
+            <li>Do not move an injured person without rendering first aid unless the casualty is in immediate danger.</li>
+        </ul>
+    </section>
+
+   
+</body>
+</html>
+
+
+    
+

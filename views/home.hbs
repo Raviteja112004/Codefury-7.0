@@ -49,21 +49,23 @@
         <a href="#">Web <span id="lg">Logo</span> </a>
       </div>
       <ul class="navlinks">
-        <li><a href="#">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/weather">Weather</a></li>
-        <li><a href="#">Helpline</a></li>
-        <li><a href="#">Donate</a></li>
+        <li><a href="/">Helpline</a></li>
+        <li><a href="/">Donate</a></li>
         <li><a href="/news">Latest News</a></li>
         <div class="loginuser text-black ml-[140px] mr-[100px] item-center flex space-x-7 my-auto right-[100px]">
-          
+
           <li class="my-auto"> <a href="#">Hello, {{user}}</a></li>
-          <li class="bg-[#03a803] px-4 py-2 my-auto rounded-xl text-white login"><a href="{{form}}">{{content}}</a></li> </div>
-          <button class="pushable">
-            <span class="front">
-              SOS
-            </span>
-          </button>
-       
+          <li class="bg-[#03a803] px-4 py-2 my-auto rounded-xl text-white login"><a href="{{form}}">{{content}}</a></li>
+        </div>
+        <button class="pushable">
+          <span class="front">
+            <a href="tel:8073328516">
+              SOS</a>
+          </span>
+        </button>
+
       </ul>
 
 
@@ -76,60 +78,81 @@
       </div>
     </div>
     <div class="dropbox_menu flex flex-col items-center">
-    <button class="pushable grid mx-auto justify-center">
+      <button class="pushable grid mx-auto justify-center">
         <span class="front flex">
-            SOS
+          SOS
         </span>
-    </button>
-    <li class="my-auto"> <a href="#">Hello, {{user}}</a></li>
-    <li><a href="#">Home</a></li>
-    <li><a href="/weather">Weather</a></li>
-    <li><a href="#">Helpline</a></li>
-    <li><a href="#">Donate</a></li>
-    <li><a href="/news">Latest News</a></li>
-    <li class="bg-[#03a803] px-4 w-[140px] mx-auto py-2 rounded-xl text-white login">
+      </button>
+      <li class="my-auto"> <a href="#">Hello, {{user}}</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/weather">Weather</a></li>
+      <li><a href="/">Helpline</a></li>
+      <li><a href="/">Donate</a></li>
+      <li><a href="/news">Latest News</a></li>
+      <li class="bg-[#03a803] px-4 w-[140px] mx-auto py-2 rounded-xl text-white login">
         <a href="{{form}}">{{content}}</a>
-    </li>
-</div>
+      </li>
+    </div>
 
   </header>
-  <main>
-    <!-- <section class="home">
-    <h1>Welcome</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, numquam.</p>
+<div class="marquee-wrapper">
+  <div class="marquee-content space-x-20">
+    <span>Help Line: <a class="hover:underline hover:text-blue-700 ">+91 9711077372</a> </span>
+    <span>Heavy Rain in Bangalore</span>
+  </div>
+</div>
 
-    </section> -->
+  <main>
 
     <section class="home">
 
-      <div class="slider py-20 w-[100%] mt-[300px]  mx-auto hid ">
-        <div class="slides mx-auto rounded-xl overflow-hidden relative h-[400px] w-full">
-          <div class="slide slide w-[100%] absolute h-full  transition-[1s] ">
-            <img src="img/drought.jpg" class="h-[100%] mx-auto hover:scale-[1.1]  transition-all" alt="Red Slide">
-            <div class="popup">Tired of usin Casio <br>Try Teja calculator<br>
-                Click here:<button class="p-1 ml-2 rounded-lg hover:-translate-y-1 transition-all bg-black" ><a href="https://github.com/Raviteja112004/Simple-Calculator">Link</a></button></div>
+      <div class="slider py-20 w-[100%] mt-[300px] mx-auto hid">
+        <div class="slides mx-auto rounded-xl overflow-hidden relative h-[500px]">
+
+          <div class="slide w-[100%] relative h-full transition-[1s]">
+            <!-- Information Div -->
+            <div class="info absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
+              <h2 class="text-xl font-bold"><a href="/heatwaves" class="cursor-pointer hover:text-green-500">Heatwaves</a></h2>
+              <p class="text-sm">A severe heatwave affecting the landscape.</p>
+            </div>
+            <img src="img/drought.jpg" class="h-[100%] w-full object-cover mx-auto" alt="Drought">
           </div>
-          <div class="slide  slide w-[100%] absolute  h-full transition-[1s]">
-            <img src="img/landslide.jpg" class="h-[100%] mx-auto  hover:scale-[1.1] transition-all" alt="Blue Slide">
-            
+
+          <div class="slide w-[100%] absolute top-0 left-0 h-full transition-[1s]">
+            <!-- Information Div -->
+            <div class="info absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
+              <h2 class="text-xl font-bold"><a href="/landslide" class="cursor-pointer hover:text-green-500">Landslide</a></h2>
+              <p class="text-sm">A landslide blocking a road after heavy rain.</p>
+            </div>
+            <img src="img/landslide.jpg" class="h-[100%] w-full object-cover mx-auto" alt="Landslide">
           </div>
-          <div class="slide slide w-[100%] absolute  h-full transition-[1s]">
-            <img src="img/road.jpg" class="h-[100%] mx-auto  hover:scale-[1.1] transition-all" alt="Green Slide">
-            
+
+          <div class="slide w-[100%] absolute top-0 left-0 h-full transition-[1s]">
+            <!-- Information Div -->
+            <div class="info absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
+              <h2 class="text-xl font-bold"><a href="/earthquake" class="cursor-pointer hover:text-green-500">Earthquake</a></h2>
+              <p class="text-sm">A deserted road in the wilderness.</p>
+            </div>
+            <img src="img/road.jpg" class="h-[100%] w-full object-cover mx-auto" alt="Road">
           </div>
-          <div class="slide slide w-[100%] absolute  h-full transition-[1s]">
-            <img src="img/floood.jpg" class="h-[100%] mx-auto  hover:scale-[1.1] transition-all" alt="Green Slide">
-            
+
+          <div class="slide w-[100%] absolute top-0 left-0 h-full transition-[1s]">
+            <!-- Information Div -->
+            <div class="info absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white p-4">
+              <h2 class="text-xl font-bold"><a href="/flood" class="cursor-pointer hover:text-green-500">Flood</a></h2>
+              <p class="text-sm">Floodwaters covering the landscape.</p>
+            </div>
+            <img src="img/floood.jpg" class="h-[100%] w-full object-cover mx-auto" alt="Flood">
           </div>
-          
+
         </div>
-        <div class="buttons  flex justify-center space-x-40  mt-6">
-          <button
-            class="prev  text-black p-3 px-5   rounded-xl ">&#10094</button>
-          <button
-            class="next  text-black p-3 px-5 rounded-xl">&#10095</button>
+        <div class="buttons flex justify-center space-x-40 mt-6">
+          <button class="prev text-black p-3 px-5 rounded-xl">&#10094;</button>
+          <button class="next text-black p-3 px-5 rounded-xl">&#10095;</button>
         </div>
-  
+      </div>
+
+
     </section>
   </main>
 

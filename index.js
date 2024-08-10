@@ -36,6 +36,18 @@ app.get('/weather', (req, res) => {
 app.get('/news', (req, res) => {
     res.render('news');
 });
+app.get('/heatwaves', (req, res) => {
+    res.render('Heatwaves');
+});
+app.get('/landlside', (req, res) => {
+    res.render('landslide');
+});
+app.get('/flood', (req, res) => {
+    res.render('flood');
+});
+app.get('/earthquake', (req, res) => {
+    res.render('Earthquake');
+});
 
 app.get('/signup', (req, res) => {
     res.render('signup', { content: '' });

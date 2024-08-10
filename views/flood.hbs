@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+      /* header  */
+      li{
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+    color: rgb(3, 168, 3);
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+a:hover{
+    color: #000000;
+}
+
+/* header */
+
+header{
+    position: relative;
+  
+
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border-radius: 30px; */
+    
+ /* From https://css.glass */
+background: rgba(168, 168, 168, 0.26);
+/* border-radius: 16px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px);
+
+}
+
+.navbar .logo a{
+    font-size:1.5rem;
+    font-weight: bold;
+}
+
+.logo{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+ margin-left: 2rem;
+ 
+}
+
+.logo #lg{
+    
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.navbar .navlinks{
+ display: flex;
+ gap: 2rem;
+ color: rgb(3, 168, 3);
+ 
+}
+
+.navbar .toggle_btn{
+    color: rgb(6, 6, 6);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    margin-right: 2rem;
+
+
+}
+
+.nav_btn{
+    background-color:rgb(0, 159, 32) ;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 2rem;
+
+
+}
+
+.alert_btn{
+    background-color:rgb(234, 4, 4) ;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 2rem;
+
+}
+.alert_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+.alert_btn:active{
+    scale: 0.95;
+}
+
+
+.nav_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+.nav_btn:active{
+    scale: 0.95;
+}
+ /* Dropbox menu */
+ .dropbox_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    height: 0px;
+    top: 60px;
+    width: 300px;
+    background: rgba(255,255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropbox_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropbox_menu .nav_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.dropbox_menu.open{
+    height: 240px;
+    display: block;
+}
+
+
+
+   /* sub pages  */
+#sub_name{
+    color: #000;
+    margin-left: 3rem;
+    font-size: 1.5rem;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.image-container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-container img {
+    margin-top: 2rem;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+.content1{
+    margin-left: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    .image-container img {
+        object-fit: contain;
+    }
+}
+
+
+/* flood content  */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flood-content h1 {
+    color: #d9534f;
+}
+
+.section h2 {
+    color: #5bc0de;
+}
+
+.section ul {
+    margin: 0;
+    padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+.section p, .section ul li {
+    color: #555;
+}
+
+.flood-map {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .flood-content h1 {
+        font-size: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section h3 {
+        font-size: 1.25rem;
+    }
+
+    .section ul li {
+        font-size: 0.9rem;
+    }
+}
+
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+          <!-- logo -->
+          <div class="logo">
+            <a href="#">Web <span id="lg">Logo</span>   </a>
+          </div>
+          <ul class="navlinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Preplans</a></li>
+            <li><a href="/">Helpline</a></li>
+            <li><a href="/">Weather</a></li>
+            <li><a href="/weather">Latest News</a></li>
+          </ul>
+          <a href="#" class="alert_btn">Alert</a>
+          <!-- <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div> -->
+          
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+    
+        </div>
+        <div class="dropbox_menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">Preplans</a></li>
+          <li><a href="">Helpline</a></li>
+          <li><a href="/weather">Weather</a></li>
+          <!-- <a href="#" class="nav_btn">Login</a> -->
+    
+        </div>
+      </header>
+
+      <div class="image-container">
+        <img src="img/floood.jpg" alt="Earthquake Image">
+    </div>
+
+      <section class="flood-content py-10">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold text-center mb-8">Floods in India</h1>
+
+            <div class="section mb-6">
+                <h2 class="text-3xl font-semibold mb-4">Flood Vulnerability</h2>
+                <p>India is highly vulnerable to floods. Out of the total geographical area of 329 million hectares (mha), more than 40 mha is flood-prone. Floods are a recurrent phenomenon, which cause huge loss of lives and damage to livelihood systems, property, infrastructure, and public utilities. It is a cause for concern that flood-related damages show an increasing trend. The average annual flood damage in the last 10 years period from 1996 to 2005 was Rs. 4745 crore as compared to Rs. 1805 crore, the corresponding average for the previous 53 years. This can be attributed to many reasons including a steep increase in population, rapid urbanization, growing developmental and economic activities in flood plains coupled with global warming.</p>
+
+                <p>On average every year, 75 lakh hectares of land is affected, 1600 lives are lost, and the damage caused to crops, houses, and public utilities is Rs.1805 crores due to floods. The maximum number of lives (11,316) was lost in the year 1977. The frequency of major floods is more than once in five years.</p>
+
+                <p>Floods have also occurred in areas that were earlier not considered flood-prone. An effort has been made in these Guidelines to cover the entire gamut of Flood Management. Eighty per cent of the precipitation takes place in the monsoon months from June to September. The rivers bring heavy sediment load from catchments. These, coupled with inadequate carrying capacity of rivers, are responsible for causing floods, drainage congestion, and erosion of river banks. Cyclones, cyclonic circulations, and cloud bursts cause flash floods and lead to huge losses. It is a fact that some of the rivers causing damage in India originate in neighboring countries; adding another complex dimension to the problem. Continuing and large-scale loss of lives and damage to public and private property due to floods indicate that we are still to develop an effective response to floods. NDMA's Executive Summary Guidelines have been prepared to enable the various implementing and stakeholder agencies to effectively address the critical areas for minimizing flood damage.</p>
+            </div>
+
+            <div class="section mb-6">
+                <h2 class="text-3xl font-semibold mb-4">Emergency Kit</h2>
+                <ul class="list-disc pl-6">
+                    <li>Battery operated torch</li>
+                    <li>Extra batteries</li>
+                    <li>Battery operated radio</li>
+                    <li>First aid kit and essential medicines</li>
+                    <li>Emergency food (dry items) and water (packed and sealed)</li>
+                    <li>Candles and matches in a waterproof container</li>
+                    <li>Knife</li>
+                    <li>Chlorine tablets or powdered water</li>
+                    <li>Important documents (Ration card, Voter ID card, Aadhar Card, etc.)</li>
+                    <li>Cash, Aadhar Card, and Ration Card</li>
+                    <li>Thick ropes and cords</li>
+                    <li>Shoes</li>
+                </ul>
+            </div>
+
+            <div class="section mb-6">
+                <h2 class="text-3xl font-semibold mb-4">Floods: Do’s & Don’ts</h2>
+                <h3 class="text-2xl font-medium mb-3">What to do before a flood</h3>
+                <ul class="list-disc pl-6">
+                    <li>Avoid building in flood-prone areas unless you elevate and reinforce your home.</li>
+                    <li>Elevate the furnace, water heater, and electric panel if susceptible to flooding.</li>
+                    <li>Install "Check Valves" in sewer traps to prevent floodwater from backing up into the drains of your home.</li>
+                    <li>Contact community officials to find out if they are planning to construct barriers (levees, beams, and floodwalls) to stop floodwater from entering homes in your area.</li>
+                    <li>Seal the walls in your basement with waterproofing compounds to avoid seepage.</li>
+                </ul>
+
+                <h3 class="text-2xl font-medium mb-3 mt-4">If a flood is likely to hit your area</h3>
+                <ul class="list-disc pl-6">
+                    <li>Listen to the radio or television for information.</li>
+                    <li>Be aware that flash flooding can occur. If there is any possibility of a flash flood, move immediately to higher ground. Do not wait for instructions to move.</li>
+                    <li>Be aware of streams, drainage channels, canyons, and other areas known to flood suddenly. Flash floods can occur in these areas with or without such typical warnings as rain clouds or heavy rain.</li>
+                </ul>
+
+                <h3 class="text-2xl font-medium mb-3 mt-4">If you must prepare to evacuate</h3>
+                <ul class="list-disc pl-6">
+                    <li>Secure your home. If you have time, bring in outdoor furniture. Move essential items to an upper floor.</li>
+                    <li>Turn off utilities at the main switches or valves if instructed to do so. Disconnect electrical appliances. Do not touch electrical equipment if you are wet or standing in water.</li>
+                </ul>
+
+                <h3 class="text-2xl font-medium mb-3 mt-4">If you have to leave your home</h3>
+                <ul class="list-disc pl-6">
+                    <li>Do not walk through moving water. Six inches of moving water can make you fall. If you have to walk in water, walk where the water is not moving. Use a stick to check the firmness of the ground in front of you.</li>
+                    <li>Do not drive into flooded areas. If floodwaters rise around your car, abandon the car and move to higher ground if you can do so safely. You and the vehicle can be quickly swept away.</li>
+                </ul>
+            </div>
+
+            <div class="section mb-6">
+                <h2 class="text-3xl font-semibold mb-4">Flood-Prone Areas Map</h2>
+                <img src="img/floodsmap.jpg" alt="Flood-Prone Areas in India" class="flood-map">
+            </div>
+        </div>
+    </section>

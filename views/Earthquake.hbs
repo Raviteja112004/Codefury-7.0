@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        /* header  */
+
+        li{
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+    color: rgb(3, 168, 3);
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+a:hover{
+    color: #000000;
+}
+
+/* header */
+
+header{
+    position: relative;
+  
+
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border-radius: 30px; */
+    
+ /* From https://css.glass */
+background: rgba(168, 168, 168, 0.26);
+/* border-radius: 16px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px);
+
+}
+
+.navbar .logo a{
+    font-size:1.5rem;
+    font-weight: bold;
+}
+
+.logo{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+ margin-left: 2rem;
+ 
+}
+
+.logo #lg{
+    
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.navbar .navlinks{
+ display: flex;
+ gap: 2rem;
+ color: rgb(3, 168, 3);
+ 
+}
+
+.navbar .toggle_btn{
+    color: rgb(6, 6, 6);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    margin-right: 2rem;
+
+
+}
+
+.nav_btn{
+    background-color:rgb(0, 159, 32) ;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 2rem;
+
+
+}
+
+.alert_btn{
+    background-color:rgb(234, 4, 4) ;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 2rem;
+
+}
+.alert_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+.alert_btn:active{
+    scale: 0.95;
+}
+
+
+.nav_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+.nav_btn:active{
+    scale: 0.95;
+}
+ /* Dropbox menu */
+ .dropbox_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    height: 0px;
+    top: 60px;
+    width: 300px;
+    background: rgba(255,255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropbox_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropbox_menu .nav_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.dropbox_menu.open{
+    height: 240px;
+    display: block;
+}
+
+
+
+
+
+        /* sub pages  */
+#sub_name{
+    color: #000;
+    margin-left: 3rem;
+    font-size: 1.5rem;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.image-container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-container img {
+    margin-top: 2rem;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.e_main h1{
+    text-align: center;
+    color: green;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.content1{
+    margin-left: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    .image-container img {
+        object-fit: contain;
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.earthquake-content h1 {
+    color: #d9534f;
+}
+
+.section h2 {
+    color: #5bc0de;
+}
+
+.section ul {
+    margin: 0;
+    padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+.section p, .section ul li {
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .earthquake-content h1 {
+        font-size: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section h3 {
+        font-size: 1.25rem;
+    }
+
+    .section ul li {
+        font-size: 0.9rem;
+    }
+}
+
+.img2e{
+    justify-content: center;
+    align-items: center;
+    margin-left: 123px;
+}
+
+
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+          <!-- logo -->
+          <div class="logo">
+            <a href="#">Web <span id="lg">Logo</span>   </a>
+          </div>
+          <ul class="navlinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Preplans</a></li>
+            <li><a href="#">Helpline</a></li>
+            <li><a href="#">Weather</a></li>
+            <li><a href="#">Latest News</a></li>
+          </ul>
+          <a href="#" class="alert_btn">Alert</a>
+          <!-- <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div> -->
+          
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+    
+        </div>
+        <div class="dropbox_menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Preplans</a></li>
+          <li><a href="#">Helpline</a></li>
+          <li><a href="#">Weather</a></li>
+          <!-- <a href="#" class="nav_btn">Login</a> -->
+    
+        </div>
+      </header>
+
+      <main><section class="e_main">
+      
+           <div class="image-container">
+          <img src="img/earthquake.jpeg" alt="Earthquake Image">
+          </div>
+
+
+      <div class="contente">
+      <h1>Earthquake</h1>
+
+       <h1>Understanding Earthquakes</h1><br>
+      
+              <section class="earthquake-content py-10">
+                  <div class="container mx-auto px-6">
+                      <h1 class="text-4xl font-bold text-center mb-8">Understanding Earthquakes</h1>
+          
+                      <div class="section mb-6">
+                          <h2 class="text-3xl font-semibold mb-4">What is an Earthquake?</h2>
+                          <p>An earthquake is a sudden and intense shaking of the ground caused by movements within the Earth's crust or volcanic action. The Earth's crust is divided into several large and small tectonic plates that are constantly moving. When these plates grind against each other or collide, the energy stored in the Earth's crust is released in the form of seismic waves, leading to an earthquake.</p>
+                      </div>
+          
+                      <div class="section mb-6">
+                          <h2 class="text-3xl font-semibold mb-4">Causes of Earthquakes</h2>
+                          <ul class="list-disc pl-6">
+                              <li><strong>Tectonic Movements:</strong> Most earthquakes occur due to the movement of tectonic plates at their boundaries, where they can collide, pull apart, or slide past each other.</li>
+                              <li><strong>Volcanic Activity:</strong> Some earthquakes are triggered by volcanic activity, particularly during an eruption when magma pushes through the Earth's crust.</li>
+                              <li><strong>Human Activities:</strong> Activities like mining, reservoir-induced seismicity (due to the filling of large reservoirs), and geothermal energy extraction can also induce earthquakes.</li>
+                          </ul>
+                      </div>
+          
+                      <div class="section mb-6">
+                          <h2 class="text-3xl font-semibold mb-4">Measuring Earthquakes</h2>
+                          <p><strong>Magnitude:</strong> The magnitude of an earthquake is measured using the Richter scale, which quantifies the amount of energy released by an earthquake. Each whole number increase on the scale represents a tenfold increase in measured amplitude and roughly 31.6 times more energy release.</p>
+                          <p><strong>Intensity:</strong> The intensity of an earthquake is measured using the Modified Mercalli Intensity (MMI) scale, which describes the effects and damage caused by the earthquake at different locations.</p>
+                      </div>
+          
+                      <div class="section mb-6">
+                          <h2 class="text-3xl font-semibold mb-4">Earthquake Preparedness</h2>
+                          <h3 class="text-2xl font-medium mb-3">Before an Earthquake</h3>
+                          <ul class="list-disc pl-6">
+                              <li><strong>Create an Emergency Plan:</strong> Make sure everyone in your household knows what to do in case of an earthquake. Designate safe spots in each room, such as under sturdy furniture or against an interior wall.</li>
+                              <li><strong>Emergency Kit:</strong> Prepare an emergency kit that includes water, non-perishable food, flashlight, batteries, a first-aid kit, and important documents.</li>
+                              <li><strong>Secure Your Home:</strong> Fasten heavy furniture, appliances, and electronics to the walls. Store breakable items in low, closed cabinets with latches.</li>
+                          </ul>
+          
+                          <h3 class="text-2xl font-medium mb-3 mt-4">During an Earthquake</h3>
+                          <ul class="list-disc pl-6">
+                              <li><strong>Drop, Cover, and Hold On:</strong> If indoors, drop to the ground, take cover under a sturdy table or desk, and hold on until the shaking stops. Stay away from windows, outside doors, and walls.</li>
+                              <li><strong>Stay Indoors:</strong> Do not run outside during the shaking. If you are outside, move away from buildings, streetlights, and utility wires.</li>
+                              <li><strong>If in a Vehicle:</strong> Pull over to a safe area away from overpasses, bridges, and buildings. Stay inside the vehicle until the shaking stops.</li>
+                          </ul>
+          
+                          <h3 class="text-2xl font-medium mb-3 mt-4">After an Earthquake</h3>
+                          <ul class="list-disc pl-6">
+                              <li><strong>Check for Injuries and Damage:</strong> Once the shaking stops, check yourself and others for injuries. Be cautious of broken glass and debris.</li>
+                              <li><strong>Be Prepared for Aftershocks:</strong> Aftershocks often follow the main earthquake. They can cause additional damage to weakened structures, so be ready to drop, cover, and hold on again.</li>
+                              <li><strong>Communicate:</strong> Use your phone only for emergency calls. Text messages are more reliable and use less bandwidth than voice calls.</li>
+                          </ul>
+                      </div>
+          
+                      <div class="section mb-6">
+                          <h2 class="text-3xl font-semibold mb-4">Earthquake Safety Tips</h2>
+                          <ul class="list-disc pl-6">
+                              <li><strong>Stay Informed:</strong> Keep yourself updated with information from reliable sources like government agencies or news outlets.</li>
+                              <li><strong>Learn First Aid:</strong> Knowing how to administer first aid can be crucial in the aftermath of an earthquake.</li>
+                              <li><strong>Practice Drills:</strong> Regularly conduct earthquake drills with your family or coworkers to ensure everyone knows what to do.</li>
+                              <li><strong>Know How to Turn Off Utilities:</strong> Familiarize yourself with how to turn off gas, water, and electricity in case of leaks or electrical hazards.</li>
+                          </ul>
+                      </div>
+          
+                      <div class="section mb-6">
+                          <h2 class="text-3xl font-semibold mb-4">The Importance of Earthquake-Resistant Buildings</h2>
+                          <p>Constructing buildings that can withstand seismic forces is crucial in reducing the loss of life and property during an earthquake. Engineers use various design techniques, such as base isolation and reinforcement, to help buildings absorb and dissipate seismic energy.</p>
+                      </div>
+                  </div>
+                  <div class="img2e">
+                  <img src="img/earthquakemap.jpg" alt="">
+                  </div>
+              </section>
+          </body>
+          </html>
+          
+        
+      </section></main>
+      
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn');
+            const toggleBtnIcon = document.querySelector('.toggle_btn i'); 
+            const dropboxMenu = document.querySelector('.dropbox_menu');
+        
+            toggleBtn.onclick = function () {
+              dropboxMenu.classList.toggle('open');
+              const isOpen = dropboxMenu.classList.contains('open');
+        
+              toggleBtnIcon.className = isOpen 
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars';
+            }
+        
+          </script>
+</body>
+</html>
