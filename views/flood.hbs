@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Earthquake</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -277,6 +277,74 @@ body {
     }
 }
 
+/* -----------preplan------------ */
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.flood-prep {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.flood-prep h1,
+.flood-prep h2 {
+    color: #d9534f;
+}
+
+.preplanning-tips ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.preplanning-tips ul li {
+    margin-bottom: 10px;
+}
+
+.maps-section {
+    margin-top: 30px;
+}
+
+.maps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.map {
+    width: 48%;
+}
+
+.map h3 {
+    color: #5bc0de;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.map img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 
     </style>
 
@@ -290,11 +358,11 @@ body {
             <a href="#">Web <span id="lg">Logo</span>   </a>
           </div>
           <ul class="navlinks">
-            <li><a href="/">Home</a></li>
-            <li><a href="/">Preplans</a></li>
-            <li><a href="/">Helpline</a></li>
-            <li><a href="/">Weather</a></li>
-            <li><a href="/weather">Latest News</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#preplan">Preplans</a></li>
+            <li><a href="#">Helpline</a></li>
+            <li><a href="#">Weather</a></li>
+            <li><a href="#">Latest News</a></li>
           </ul>
           <a href="#" class="alert_btn">Alert</a>
           <!-- <div class="toggle_btn">
@@ -307,10 +375,10 @@ body {
     
         </div>
         <div class="dropbox_menu">
-          <li><a href="">Home</a></li>
-          <li><a href="">Preplans</a></li>
-          <li><a href="">Helpline</a></li>
-          <li><a href="/weather">Weather</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#preplan">Preplans</a></li>
+          <li><a href="#">Helpline</a></li>
+          <li><a href="#">Weather</a></li>
           <!-- <a href="#" class="nav_btn">Login</a> -->
     
         </div>
@@ -384,7 +452,38 @@ body {
 
             <div class="section mb-6">
                 <h2 class="text-3xl font-semibold mb-4">Flood-Prone Areas Map</h2>
-                <img src="img/floodsmap.jpg" alt="Flood-Prone Areas in India" class="flood-map">
+                <img src="images/floods.jpg" alt="Flood-Prone Areas in India" class="flood-map">
             </div>
         </div>
     </section>
+    <h1 id="preplan">Preplans</h1>
+    <section class="flood-prep">
+      <div class="container">
+          <h1>Flood Preplanning</h1>
+          <p>Floods can be devastating, but proper planning can reduce the risk to life and property. Here are some essential preplanning tips to prepare for floods.</p>
+
+          <div class="preplanning-tips">
+              <h2>Preplanning Tips</h2>
+              <ul>
+                  <li>Avoid building in flood-prone areas unless you elevate and reinforce your home.</li>
+                  <li>Install "Check Valves" in sewer traps to prevent floodwater from backing up into the drains of your home.</li>
+                  <li>Store important documents in a waterproof container.</li>
+                  <li>Prepare an emergency kit with essentials like food, water, flashlight, batteries, and first-aid supplies.</li>
+                  <li>Keep updated with weather forecasts and warnings through reliable sources.</li>
+              </ul>
+          </div>
+
+          <div class="maps-section">
+              <h2>Flood Risk and Safer Zones Map</h2>
+              <div class="maps-container">
+                  <div class="map">
+                      <h3>Red Zone - High Flood Risk</h3>
+                      <img src="img/floodzone.jpg" alt="Map showing high flood risk zones" />
+                  </div>
+                  
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</body>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeGuard Foundation Help Centers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    header {
+      background-color: #007bff;
+      color: #ffffff;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    .search-box {
+      margin-bottom: 2rem;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+    }
+    .help-center-card {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+    .help-center-card h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+    .help-center-card p {
+      margin: 0.5rem 0;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 768px) {
+      .search-box input {
+        font-size: 0.875rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SafeGuard Foundation Help Centers</h1>
+  </header>
+
+  <div class="container">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search for a place...">
+    </div>
+    
+    <div id="helpCenters">
+      <div class="section">
+        <div class="help-center-card" data-location="Delhi">
+          <h3>Delhi Help Center</h3>
+          <p>Address: 10 Connaught Place, Delhi, 110001</p>
+          <p>Phone: (011) 555-1234</p>
+        </div>
+        <div class="help-center-card" data-location="Mumbai">
+          <h3>Mumbai Help Center</h3>
+          <p>Address: 20 Marine Drive, Mumbai, 400020</p>
+          <p>Phone: (022) 555-5678</p>
+        </div>
+        <div class="help-center-card" data-location="Kolkata">
+          <h3>Kolkata Help Center</h3>
+          <p>Address: 30 Park Street, Kolkata, 700016</p>
+          <p>Phone: (033) 555-9012</p>
+        </div>
+        <div class="help-center-card" data-location="Chennai">
+          <h3>Chennai Help Center</h3>
+          <p>Address: 40 Marina Beach, Chennai, 600001</p>
+          <p>Phone: (044) 555-3456</p>
+        </div>
+        <div class="help-center-card" data-location="Bangalore">
+          <h3>Bangalore Help Center</h3>
+          <p>Address: 50 MG Road, Bangalore, 560001</p>
+          <p>Phone: (080) 555-7890</p>
+        </div>
+        <div class="help-center-card" data-location="Hyderabad">
+          <h3>Hyderabad Help Center</h3>
+          <p>Address: 60 Banjara Hills, Hyderabad, 500034</p>
+          <p>Phone: (040) 555-2345</p>
+        </div>
+        <div class="help-center-card" data-location="Ahmedabad">
+          <h3>Ahmedabad Help Center</h3>
+          <p>Address: 70 Ellis Bridge, Ahmedabad, 380006</p>
+          <p>Phone: (079) 555-6789</p>
+        </div>
+        <div class="help-center-card" data-location="Pune">
+          <h3>Pune Help Center</h3>
+          <p>Address: 80 FC Road, Pune, 411004</p>
+          <p>Phone: (020) 555-1234</p>
+        </div>
+        <div class="help-center-card" data-location="Chandigarh">
+          <h3>Chandigarh Help Center</h3>
+          <p>Address: 90 Sector 17, Chandigarh, 160017</p>
+          <p>Phone: (0172) 555-5678</p>
+        </div>
+        <div class="help-center-card" data-location="Jaipur">
+          <h3>Jaipur Help Center</h3>
+          <p>Address: 100 MI Road, Jaipur, 302001</p>
+          <p>Phone: (0141) 555-9012</p>
+        </div>
+        <div class="help-center-card" data-location="Lucknow">
+          <h3>Lucknow Help Center</h3>
+          <p>Address: 110 Hazratganj, Lucknow, 226001</p>
+          <p>Phone: (0522) 555-3456</p>
+        </div>
+        <!-- Added locations -->
+        <div class="help-center-card" data-location="Wayanad">
+          <h3>Wayanad Help Center</h3>
+          <p>Address: 120 Kalpetta, Wayanad, Kerala, 673121</p>
+          <p>Phone: (04936) 555-7890</p>
+        </div>
+        <div class="help-center-card" data-location="Gujarat">
+          <h3>Gujarat Help Center</h3>
+          <p>Address: 130 Gandhi Nagar, Gujarat, 382010</p>
+          <p>Phone: (079) 555-4567</p>
+        </div>
+        <div class="help-center-card" data-location="Assam">
+          <h3>Assam Help Center</h3>
+          <p>Address: 140 Guwahati, Assam, 781001</p>
+          <p>Phone: (0361) 555-1234</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('searchInput').addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+      const helpCenterCards = document.querySelectorAll('.help-center-card');
+      
+      helpCenterCards.forEach(card => {
+        const location = card.getAttribute('data-location').toLowerCase();
+        if (location.includes(searchTerm)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

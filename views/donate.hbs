@@ -8,7 +8,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <style>
     body {
-      background-color: #f8f9fa;
+     
+      background: url(img/donate.jpg);
       color: #212529;
     }
     .container {
@@ -26,7 +27,7 @@
     }
     .sidebar {
       flex: 0 0 300px;
-      max-width: 300px;
+      min-width: 400px;
       margin: 2rem auto;
       padding: 2rem;
       background: #ffffff;
@@ -85,38 +86,40 @@
 
   <script>
     // Function to update total amount in local storage and on the page
-    function updateTotalAmount(amount) {
-      let totalAmount = parseFloat(localStorage.getItem('totalAmount') || '0');
-      totalAmount += amount;
-      localStorage.setItem('totalAmount', totalAmount.toFixed(2));
-      document.getElementById('totalAmount').textContent = $${totalAmount.toFixed(2)};
-    }
+// Function to update total amount in local storage and on the page
+function updateTotalAmount(amount) {
+  let totalAmount = parseFloat(localStorage.getItem('totalAmount') || '0');
+  totalAmount += amount;
+  localStorage.setItem('totalAmount', totalAmount.toFixed(2));
+  document.getElementById('totalAmount').textContent = `$${totalAmount.toFixed(2)}`;
+}
 
-    // Event listener for form submission
-    document.getElementById('donationForm').addEventListener('submit', (event) => {
-      event.preventDefault();
+// Event listener for form submission
+document.getElementById('donationForm').addEventListener('submit', (event) => {
+  event.preventDefault();
 
-      const formData = new FormData(event.target);
-      const data = Object.fromEntries(formData.entries());
-      const donationAmount = parseFloat(data.amount);
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData.entries());
+  const donationAmount = parseFloat(data.amount);
 
-      if (isNaN(donationAmount) || donationAmount <= 0) {
-        document.getElementById('responseMessage').innerHTML = <div class="alert alert-danger">Invalid donation amount.</div>;
-        return;
-      }
+  if (isNaN(donationAmount) || donationAmount <= 0) {
+    document.getElementById('responseMessage').innerHTML = `<div class="alert alert-danger">Invalid donation amount.</div>`;
+    return;
+  }
 
-      // Update the total amount in local storage
-      updateTotalAmount(donationAmount);
+  // Update the total amount in local storage
+  updateTotalAmount(donationAmount);
 
-      // Show success message
-      document.getElementById('responseMessage').innerHTML = <div class="alert alert-success">Thank you for your donation!</div>;
-    });
+  // Show success message
+  document.getElementById('responseMessage').innerHTML = `<div class="alert alert-success">Thank you for your donation!</div>`;
+});
 
-    // Fetch the total amount from local storage when the page loads
-    document.addEventListener('DOMContentLoaded', () => {
-      const totalAmount = localStorage.getItem('totalAmount') || '0';
-      document.getElementById('totalAmount').textContent = $${parseFloat(totalAmount).toFixed(2)};
-    });
+// Fetch the total amount from local storage when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+  const totalAmount = localStorage.getItem('totalAmount') || '0';
+  document.getElementById('totalAmount').textContent = `$${parseFloat(totalAmount).toFixed(2)}`;
+});
+
   </script>
 </body>
 </html>

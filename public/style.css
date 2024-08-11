@@ -182,3 +182,45 @@ background: #e0e0e0;;
   color: #000;
 }
 
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin: 1rem 0;
+}
+.section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.section h2 {
+  /* text-align: center; */
+  margin-top: 0;
+}
+.section p {
+  line-height: 1.6;
+}
+.section:nth-of-type(odd) {
+  background-color: #e9ecef;
+}
+.section h3 {
+  text-align: left;
+  margin-top: 1.5rem;
+}
+.section .image-container {
+  width: 300px;
+  text-align: center;
+  margin: 1rem 0;
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 1rem;
+  }
+}

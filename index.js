@@ -168,6 +168,9 @@ app.get('/signup', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about');
 });
+app.get('/helpcenters', (req, res) => {
+    res.render('helpcenter');
+});
 
 app.get('/helpline', (req, res) => {
     res.render('helpline');
